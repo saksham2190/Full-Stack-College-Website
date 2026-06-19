@@ -1,0 +1,65 @@
+.mcourses-container {
+  margin: 60px auto 180px;
+  width: 85%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.mcourses-card {
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 20px;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mcourses-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.mcourses-icon {
+  color: #3ab5ac;
+}
+
+.mcourses-card h3 {
+  margin: 10px 0 0;
+  font-size: 22px;
+}
+
+.mcourses-card p {
+  color: #555;
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+.mcourses-link {
+  margin-top: auto;
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.mcourses-link:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .mcourses-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .mcourses-container {
+    grid-template-columns: 1fr;
+  }
+}

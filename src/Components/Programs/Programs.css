@@ -1,0 +1,116 @@
+
+.programs{
+    margin: 80px auto;
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.program img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+.program{
+    flex: 1 0 31%;
+    max-width: 25%;
+    position: relative;
+    margin-bottom: 90px;
+}
+
+.caption{
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #ffffff;
+    cursor: pointer;
+    opacity: 0;
+    padding-top: 70%;
+    transition: 0.6s;
+}
+
+.caption img {
+    width: 60px;
+    margin-bottom: 10px;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(38%) saturate(3840%) hue-rotate(111deg) brightness(114%) contrast(101%);
+}
+
+.program:hover .caption{
+    opacity: 1;
+    padding-top: 0;
+}
+
+/*--------media query--------*/
+
+@media (max-width: 1400px) {
+    .programs {
+        width: 90%;
+        margin: 50px auto;
+        flex-wrap: wrap;
+    }
+
+    .program {
+        flex: 1 0 31%;  /* Keeps the flex grow/shrink behavior the same */
+        max-width: 31%;  /* Ensures it stays within 3 items per row */
+        margin-bottom: 60px;
+        margin-left: 10px;  /* Adds left margin for space between items */
+        margin-right: 10px;  /* Adds right margin for space between items */
+    }
+
+    /* Optional: you can also reduce the bottom margin to make the spacing look consistent */
+    .program:nth-child(3n) {
+        margin-right: 0;  /* Remove right margin on the last item in each row */
+    }
+}
+
+@media (max-width: 968px) {
+    .programs {
+        width: 42%;
+        margin: 30px auto;
+    }
+
+    .program {
+        flex: 1 0 100%;
+        max-width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .caption {
+        padding-top: 80%;
+    }
+
+    .caption img {
+        width: 50px;
+    }
+}
+
+@media (max-width: 580px) {
+    .programs {
+        width: 60%;
+        margin: 20px auto;
+    }
+
+    .program {
+        flex: 1 0 100%;
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .caption {
+        padding-top: 90%;
+    }
+
+    .caption img {
+        width: 40px;
+    }
+}

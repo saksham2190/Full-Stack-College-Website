@@ -1,0 +1,32 @@
+.com-logos {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin: 20px 0;
+  }
+  
+  /* Style for the slider that holds all the images */
+  .com-logos-slide {
+    display: flex;
+    animation: slide 30s linear infinite; /* Animation to scroll the logos */
+  }
+  
+  /* Style for each individual logo */
+  .com-logos-slide img {
+    width: 150px;  /* Set a fixed width for all logos */
+    height: 100px; /* Set a fixed height for all logos */
+    object-fit: contain; /* Ensure logos maintain aspect ratio while filling the space */
+    margin: 10px;
+    margin-bottom: 80px;
+  }
+  
+  /* Add animation to make the images scroll horizontally */
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  

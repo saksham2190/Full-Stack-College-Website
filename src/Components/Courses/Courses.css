@@ -1,0 +1,122 @@
+.courses {
+  margin: 80px auto;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.featured-courses img {
+  width: 90%;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.6s ease;
+  
+}
+
+.featured-courses {
+  flex: 1 0 30%;
+  max-width: 30%;
+  
+  position: relative;
+  overflow: hidden; /* Ensure .a1 is not visible initially */
+  margin-left: 18px;
+}
+
+.a1 {
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #00fae5;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease; /* Fade transition */
+}
+
+.first-row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 44px;
+  align-items: center;
+}
+
+.second-row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 35px;
+  
+}
+
+.a1.hovered {
+  opacity: 1;
+}
+.center-btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.featured-courses p {
+  font-size: 20px;
+}
+
+
+
+/* Media Queries */
+
+/* For tablets and smaller screens (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .featured-courses {
+    flex: 1 0 45%; /* Adjust to take up more space */
+    max-width: 35%; /* Adjust max width */
+    margin-left: 25px; /* Reduce margin */
+  }
+
+  .featured-courses img {
+    width: 100%; /* Full width for images */
+  }
+
+  .featured-courses p {
+    font-size: 18px; /* Slightly smaller font size */
+  }
+}
+
+/* For mobile screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .featured-courses {
+    flex: 1 0 100%; /* Full width for each course */
+    max-width: 38%; /* Full width */
+    margin-left: 10px; /* Add space between rows */
+    margin-right: 10px;
+  }
+
+  .featured-courses img {
+    width: 100%; /* Full width for images */
+  }
+
+  .featured-courses p {
+    font-size: 16px; /* Smaller font size */
+    
+  }
+}
+
+/* For very small mobile screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .featured-courses p {
+    font-size: 14px; /* Even smaller font size */
+  }
+
+  .center-btn {
+    margin-top: 20px; /* Add some space above the button */
+  }
+}

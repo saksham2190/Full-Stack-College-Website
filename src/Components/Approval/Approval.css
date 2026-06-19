@@ -1,0 +1,25 @@
+
+  
+  /* The sliding container that holds all the logos */
+  .logos-slide {
+    display: flex;
+    animation: slide 20s infinite linear; /* Animation for sliding logos */
+  }
+  
+  /* Each image inside the slider */
+
+  /* Hover effect to scale images */
+  .logos-slide img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Keyframes for sliding effect */
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%); 
+    }
+  }
+  
